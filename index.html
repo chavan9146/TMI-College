@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>to h5</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">TMI College</div>
+      <button id="mode-toggle" class="dark"><span id="toggle-icon">🌙</span></button>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="main-nav" class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+
+  <div class="search-container1">
+    <input type="text" id="searchInput1" placeholder="Search..." onkeydown="handleKey(event)" class="searchInput1">
+    <button class="search-button1" onclick="performSearch1()">Go</button>
+  </div>
+  
+  <div class="container12">
+    <div class="to">
+      <span>Watch</span>
+      <span>The</span>
+      <span>Full</span>
+    </div>
+    <div class="h5">
+      <span>Video</span>
+      <span>To</span>
+      <span>Active</span>
+      <span>Get</span>
+      <span>Source</span>
+      <span>Code</span>
+      <span>Button</span>
+    </div>
+  </div>
+
+  <div id="player" class="player"></div>
+
+  <button id="get-code-btn" disabled class="get-code-btn">✅Get Source Code</button>
+
+  <div id="code-section" class="code-section">
+    <div class="code-buttons">
+      <button onclick="showCode('html')">HTML</button>
+      <button onclick="showCode('css')">CSS</button>
+      <button onclick="showCode('js')">JavaScript</button>
+    </div>
+
+    <div id="html" class="code-block">
+      <div class="window-controls">
+        <span class="red"></span>
+        <span class="yellow"></span>
+        <span class="green"></span>
+      </div>
+      <div class="code-content">
+<!--Add Html Source code-->
+&lt;div class="navbar"&gt;
+   &lt;div class="logo"&gt;🍕 Pizza&lt;/div&gt;
+    &lt;nav&gt;
+      &lt;a href="#" &gt;Home&lt;/a&gt;
+      &lt;a href="#" &gt;Menu&lt;/a&gt;
+      &lt;a href="#" &gt;Offers&lt;/a&gt;
+      &lt;a href="#" &gt;Pizza&lt;/a&gt;
+      &lt;a href="#" &gt;services&lt;/a&gt;
+      &lt;a href="#" &gt;Restaurants&lt;/a&gt;
+    &lt;/nav&gt;
+   &lt;div&gt;
+         &lt;input type="text" placeholder="search..." class="search"&gt;
+         &lt;button class="button1"&gt;Search&lt;/button&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ok"&gt;
+         &lt;h1&gt;savor Every bite with our handcrafted pizza&lt;/h1&gt;
+         &lt;p&gt;Fresh ingredients , bold flavors crafted just for you&lt;/p&gt;
+         &lt;button class="btn btn-primary"&gt;Explore menu&lt;/button&gt;
+         &lt;button class="btn btn-secondary"&gt;Watch video&lt;/button&gt;
+  &lt;div class="offers"&gt;
+    &lt;div class="offer-card"&gt;
+         &lt;img src="https://img.icons8.com/ios-filled/50/000000/delivery.png" alt="Delivery"&gt;
+         &lt;h3&gt;Lighning Delivery&lt;/h3&gt;
+         &lt;p&gt;Hot & Fresh in 30 mins&lt;/p&gt;
+    &lt;/div&gt;
+ &lt;div class="offer-card"&gt;
+           &lt;img src="https://img.icons8.com/ios-filled/50/000000/restaurant-table.png" alt="Dine-In"&gt;
+           &lt;h3&gt;Dine-In Ready&lt;/h3&gt;
+           &lt;p&gt;Enjoy At your table&lt;/p&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;
+&lt;div class="discount"&gt;20% off&lt;/div&gt;
+   &lt;div class="featured-pizza"&gt;
+        &lt;h2&gt;Featured pizza of the month&lt;/h2&gt;
+   &lt;div class="featured-card"&gt;
+        &lt;h3&gt;Spicy inferno pizza&lt;/h3&gt;
+        &lt;p&gt;Jalapenos, pepper jack cheese, and fiery sauce - $11.99&lt;/p&gt;
+        &lt;button class="order-btn"&gt;order Now&lt;/button&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="menu"&gt;
+  &lt;div class="menu-item" style="background-color: #ff9800;"&gt; 
+         &lt;img src="https://img.icons8.com/ios-filled/50/ffffff/burger.png" alt="Classic Pizza"&gt;
+         &lt;h3&gt;Classic pizza&lt;/h3&gt;
+         &lt;p class="price"&gt;$8.99&lt;/p&gt;
+         &lt;button class="order-btn"&gt;order Now&lt;/button&gt;
+&lt;/div&gt;
+     &lt;div class="menu-item" style="background-color: rgb(255, 0, 247);"&gt;
+         &lt;img src="https://img.icons8.com/ios-filled/50/ffffff/vegetarian-food.png" alt="Veggie Pizza"&gt;
+         &lt;h3&gt;Veggie pizza&lt;/h3&gt;
+         &lt;p class="price"&gt;7.99&lt;/p&gt;
+         &lt;button class="order-btn"&gt;order Now&lt;/button&gt;
+&lt;/div&gt;
+     &lt;div class="menu-item" style="background-color: aqua;"&gt;
+         &lt;img src="https://img.icons8.com/ios-filled/50/ffffff/cheeseburger.png" alt="Double CheesePizza"&gt;
+         &lt;h3&gt;Bacon pizza&lt;/h3&gt;
+         &lt;p class="price"&gt;$10.99&lt;/p&gt;
+         &lt;button class="order-btn"&gt;order Now&lt;/button&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;
+  &lt;div class="testimonials"&gt;
+         &lt;h2&gt;What our customers say&lt;/h2&gt;
+    &lt;div class="testimonial"&gt;
+         &lt;p&gt;"Fast delivery and always  Fresh . love it!"&lt;/p&gt;
+         &lt;p&gt;- umakant agrawal&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;div class="testimonial"&gt;
+         &lt;p&gt;"Best pizza in town! the flavors are incredible"&lt;/p&gt;
+         &lt;p&gt;- sohan jogdand&lt;/p&gt;
+       &lt;/div&gt;
+   &lt;/div&gt;
+ &lt;div class="newsletter"&gt;
+        &lt;h2&gt;stay updated with our newsletter&lt;/h2&gt;
+      &lt;input type="email" placeholder="Enter your E-mail"&gt;
+       &lt;button&gt;submit&lt;/button&gt;
+    &lt;/div&gt;
+      &lt;div class="footer"&gt;
+                 &lt;p&gt;Contact Us : support@pizzahavan.com | (123) 456-2584&lt;/p&gt;
+              &lt;p&gt;
+           &lt;a href="#"&gt;Facebook&lt;/a&gt;
+                  &lt;a href="#"&gt;Instagram&lt;/a&gt;
+           &lt;a href="#"&gt;Twitter&lt;/a&gt;
+         &lt;/p&gt;
+       &lt;p&gt;&copy; 2025 Pizza Havan. All rights reserved.&lt;/p&gt;
+&lt;/div&gt;
+<!--End Html Source code-->
+      </div>
+    </div>
+
+    <div id="css" class="code-block">
+      <div class="window-controls">
+        <span class="red"></span>
+        <span class="yellow"></span>
+        <span class="green"></span>
+      </div>
+      <div class="code-content">
+<!--Add css Source code-->
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5e8c7;
+    color: #333;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .navbar nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #666;
+  }
+  .navbar nav a:hover {
+    color: #ff5722;
+  }
+  .ok {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  .ok h1 {
+    color: #ff5722;
+    font-size: 48px;
+    margin: 0;
+  }
+  .ok p {
+    font-size: 18px;
+    color: #666;
+  }
+  .ok .btn {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  .btn-secondary {
+    background-color: transparent;
+    border: 1px solid #ff5722;
+    border-radius: 5px;
+  }
+  .offers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ff8000;
+  }
+  .offer-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px #000;
+  }
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  .menu-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px #000;
+    width: 200px;
+  }
+  .menu-item h3 {
+    margin: 10px 0;
+  }
+  .menu-item .price {
+    color: #ff5722;
+    font-weight: bold;
+  }
+  .menu-item .order-btn {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .discount {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    background: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+  .featured-pizza {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ff8000;
+  }
+  .featured-pizza h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  .featured-card {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  .featured-card:hover {
+    transform: scale(1.05);
+
+  }
+  .testimonials {
+    color: #ff5722;
+    text-align: center;
+    background: #ff5722;
+  }
+  .testimonials h2 {
+    color: #ff5722;
+    margin-bottom: 20px;
+  }
+  .testimonial {
+    display: inline-block;
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #000;
+  }
+  .newsletter {
+    padding: 40px 20px;
+    text-align: center;
+    background: #ff5722;
+    color: white;
+  }
+  .newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  .newsletter button {
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .footer { 
+    padding: 20px;
+    background: #333;
+    color: white;
+    text-align: center;
+  }
+  .footer a {
+    color: #ff5722;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  .search {
+    border-radius: 8px;
+    height: 30px;
+    background-color: #fff;
+    border: 2px solid blueviolet;
+  }
+  .button1 {
+    background-color: orange;
+    height: 33px;
+    border-radius: 8px;
+  }
+<!--End css Source code-->
+      </div>
+    </div>
+
+    <div id="js" class="code-block">
+      <div class="window-controls">
+        <span class="red"></span>
+        <span class="yellow"></span>
+        <span class="green"></span>
+      </div>
+      <div class="code-content">
+// javascript no more
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <section class="follow" id="contact">
+    <h2>Follow Us</h2>
+    <div class="icons">
+      <a href="#"><i class="fab fa-facebook" style="color: blue;"></i></a>
+      <a href="https://www.instagram.com/tmi_college/?next=%2F&hl=en"><i class="fab fa-instagram" style="color: red;"></i></a>
+      <a href="#"><i class="fab fa-twitter" style="color: aqua;"></i></a>
+    </div>
+    <p>&copy; 2025 to h5. All rights reserved.</p>
+  </section>
+
+  <button onclick="topFunction()" id="topBtn" class="topBtn">↑</button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
