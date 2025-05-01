@@ -4,6 +4,30 @@ body {
     background: wheat;
     scroll-behavior: smooth;
   }
+.code-container {
+    position: relative;
+    background: #1e1e1e;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: monospace;
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .copy-btn:active {
+    transform: scale(0.95);
+  }
   .container12 {
 text-align: center;
 display: flex;
