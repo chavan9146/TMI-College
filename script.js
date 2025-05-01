@@ -91,4 +91,10 @@ function toggleMenu() {
     blocks.forEach(block => block.style.display = 'none');
     document.getElementById(type).style.display = 'block';
   }
-  //second code
+  //copy button
+function copyText() {
+    const text = document.getElementById("codeText").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      alert("Copied to clipboard!");
+    });
+  }
