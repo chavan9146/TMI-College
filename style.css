@@ -4,6 +4,24 @@ body {
     background: wheat;
     scroll-behavior: smooth;
   }
+.watch {
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: rgb(70, 156, 255);
+    cursor: pointer;
+  }
+  .watch:hover {
+    background-color: #00ff88;
+  }
+  .watch a {
+    text-decoration: none; /* Removes underline */
+    color: inherit;         /* Inherits button text color */
+    display: inline-block;  /* Keeps layout inline */
+  }
+  .watch1 {
+    justify-self: center;
+    
+  }
 .code-container {
     position: relative;
     background: #1e1e1e;
