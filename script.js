@@ -14,9 +14,7 @@ function toggleMenu() {
   function performSearch1() {
     const query = document.getElementById("searchInput1").value.trim().toLowerCase();
     const pages = {
-      "html": "HTML.html",
-      "css": "CSS.css",
-      "javascript": "javascript-course.html"
+      "pizza": "https://youtu.be/6JmajXnR7TY?si=8dIdube38pHsmiX8"
     };
     if (pages[query]) {
       window.location.href = pages[query];
