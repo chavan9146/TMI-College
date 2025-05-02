@@ -4,10 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Source Code page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
   <style>
     /* Reset default styles */
 
+.h3 {
+  text-align: center;
+  color: rgb(0, 34, 255);
+  font-size: 45px;
+}
+.container3 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/*compiler for main webpage */
+#editorContainer5 {
+  border: 5px solid blue;
+  height: 42vh;
+  width: 80%; 
+  margin: auto
+}
 
+.CodeMirror {
+  height: 100%;
+  font-size: 16px;
+  text-align: left;
+  border: 5px solid blue;
+}
+.myok {
+  flex: 1;
+  border: 5px solid blue;
+  background-color: aqua;
+  width: 100%;
+  height: 300px;
+  
+}
 /* Body styles */
 
 .code-container {
@@ -810,7 +843,32 @@ console.log(5 + 3);
   </div>
   </div>
 </div>
-
+<!--compiler live start-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+<!-- Prism JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script><br><br>
+<h2 class="h3">Live Html Compiler</h2>
+<div class="container3">
+    <!-- Language Selection -->
+    <div id="editorContainer5">
+      <iframe id="output" class="myok"></iframe>
+      <textarea id="htmlEditor"></textarea>
+  
+    </div>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/closetag.min.js"></script><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+<!--compiler section end-->
 <!-- YOUTUBE API + LOGIC -->
 <script>
   let tag = document.createElement('script');
@@ -891,6 +949,43 @@ console.log(5 + 3);
       performSearch1();
     }
   }
+   //compiler for main webpage
+const editor = CodeMirror.fromTextArea(document.getElementById("htmlEditor"), {
+  mode: "htmlmixed",
+  theme: "material-darker",
+  lineNumbers: true,
+  lineWrapping: true,
+  autoCloseTags: true,
+  indentUnit: 1,
+  indentWithTabs: false,
+  extraKeys: {
+    "Enter": function(cm) {
+      const cursor = cm.getCursor();
+      cm.replaceRange("\n ", cursor); // 1 space on Enter
+    }
+  }
+});
+
+const output = document.getElementById("output");
+
+function updateOutput() {
+  output.srcdoc = editor.getValue();
+}
+
+editor.on("change", updateOutput);
+
+// Default content
+editor.setValue(`<!DOCTYPE html>
+<html>
+<head>
+<title>Live HTML</title>
+</head>
+<body>
+<h1>Hello from auto @tmicollge!</h1>
+</body>
+</html>`);
+
+updateOutput();
 </script>
 
 </body>
