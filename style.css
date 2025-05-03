@@ -127,6 +127,9 @@ filter: drop-shadow(0 5px 10px rgba(255, 0, 13, 0.5));
 }
 }
   .header {
+      position: fixed;
+    width: 97%;
+    z-index: 1000;
     background: #111;
     color: white;
     display: flex;
